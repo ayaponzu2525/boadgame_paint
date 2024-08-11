@@ -119,6 +119,7 @@ h1 {
 #shapeImage {
     max-width: 100%;
     height: auto;
+    max-height: 200;
     margin-top: 20px;
     border-radius: 10px;
 }
@@ -187,5 +188,46 @@ h1 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.container-scoreboard {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    width: 300px;
+    margin-left: 20px;
+}
+
+#scoreboard div {
+    margin: 10px 0;
+}
+
+#scoreboard button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #0e8b8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scoreboard-item {
+    font-size: 1.5em; /* 全体の文字サイズを大きく */
+    margin-bottom: 10px; /* 各プレイヤー間に余白を追加 */
+}
+
+.scoreboard-item span, .scoreboard-item button {
+    margin-right: 10px; /* 各要素間に余白を追加 */
+}
+
+
+#hiddenImage {
+    max-width: 100%;
+    height: auto;
 }
 

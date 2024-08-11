@@ -17,16 +17,27 @@
                 <button id="shapesbtn" class="game-btn">図形をめくる</button>
             </div>
         </div>
-         <div class="container-center">
+        <div class="container-center">
             <h1>お絵描きゲーム</h1>
-            <p id="prompt" class="prompt-text"></p> <!-- お題が表示される行 -->
-            <p id="category" class="info-text"></p> <!-- カテゴリが表示される行 -->
-            <p id="difficulty" class="info-text"></p> <!-- 難易度が表示される行 -->
-            <div class="button-group"> <!-- ボタンが配置される行 -->
+            <p id="roundCounter" class="info-text">1 回目</p>
+            <div id="promptContainer">
+                <p id="prompt" class="prompt-text"></p>
+                <p id="category" class="info-text"></p>
+                <p id="difficulty" class="info-text"></p>
+                <img id="hiddenImage" src="hidden.gif" alt="隠された状態" style="display: none;">
+            </div>
+            <div class="button-group">
                 <button id="startBtn" class="game-btn">開始する</button>
                 <button id="nextBtn" class="game-btn" style="display: none;">次へ</button>
                 <button id="endBtn" class="game-btn" style="display: none;">終了する</button>
                 <button id="toggleHideBtn" class="game-btn" style="display: none;">隠す</button>
+            </div>
+        </div>
+        <div class="container-scoreboard">
+            <h2>スコアボード</h2>
+            <div id="scoreboard"></div>
+            <div class="button-group">
+                <button id="addPlayerBtn" class="game-btn">プレイヤー追加</button>
             </div>
         </div>
     </div>
