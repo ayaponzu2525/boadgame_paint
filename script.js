@@ -1,4 +1,10 @@
-let prompts = [];
+const prompts = [
+    {"prompt": "犬を描く", "category": "動物", "difficulty": "簡単"},
+    {"prompt": "車を描く", "category": "乗り物", "difficulty": "普通"},
+    {"prompt": "花を描く", "category": "自然", "difficulty": "簡単"},
+    {"prompt": "飛行機を描く", "category": "乗り物", "difficulty": "難しい"}
+];
+
 let usedPrompts = [];
 
 document.getElementById('startBtn').addEventListener('click', startGame);
@@ -6,15 +12,10 @@ document.getElementById('nextBtn').addEventListener('click', showNextPrompt);
 document.getElementById('endBtn').addEventListener('click', endGame);
 
 function startGame() {
-    fetch('prompts.json')
-        .then(response => response.json())
-        .then(data => {
-            prompts = data;
-            document.getElementById('startBtn').style.display = 'none';
-            document.getElementById('nextBtn').style.display = 'inline-block';
-            document.getElementById('endBtn').style.display = 'inline-block';
-            showNextPrompt();
-        });
+    document.getElementById('startBtn').style.display = 'none';
+    document.getElementById('nextBtn').style.display = 'inline-block';
+    document.getElementById('endBtn').style.display = 'inline-block';
+    showNextPrompt();
 }
 
 function showNextPrompt() {
@@ -36,6 +37,6 @@ function endGame() {
     document.getElementById('startBtn').style.display = 'inline-block';
     document.getElementById('nextBtn').style.display = 'none';
     document.getElementById('endBtn').style.display = 'none';
-    prompts = prompts.concat(usedPrompts);
+    prompts.push(...usedPrompts);
     usedPrompts = [];
 }
