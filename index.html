@@ -2,55 +2,34 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>お絵描きゲーム</title>
-    <style>
-        /* ゲーム風デザイン */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            padding: 50px;
-        }
-        .button {
-            font-size: 20px;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .start-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-        }
-        .next-btn, .end-btn {
-            display: none;
-            background-color: #008CBA;
-            color: white;
-            border: none;
-        }
-        .end-btn {
-            background-color: #f44336;
-        }
-        #prompt {
-            font-size: 24px;
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <h1>お絵描きゲーム</h1>
-    <div id="prompt"></div>
-    <button id="startBtn" class="button start-btn">開始する</button>
-    <button id="nextBtn" class="button next-btn">次へ</button>
-    <button id="endBtn" class="button end-btn">終了する</button>
-
+    <div class="block">
+        <div class="container-left">
+            <h2>図形</h2>
+            <p id="shapes" class="shapes-text"></p>
+            <img id="shapeImage" src="" alt="図形の画像" style="display: none;">
+            <div class="button-group">
+                <button id="shapesbtn" class="game-btn">図形をめくる</button>
+            </div>
+        </div>
+         <div class="container-center">
+            <h1>お絵描きゲーム</h1>
+            <p id="prompt" class="prompt-text"></p> <!-- お題が表示される行 -->
+            <p id="category" class="info-text"></p> <!-- カテゴリが表示される行 -->
+            <p id="difficulty" class="info-text"></p> <!-- 難易度が表示される行 -->
+            <div class="button-group"> <!-- ボタンが配置される行 -->
+                <button id="startBtn" class="game-btn">開始する</button>
+                <button id="nextBtn" class="game-btn" style="display: none;">次へ</button>
+                <button id="endBtn" class="game-btn" style="display: none;">終了する</button>
+                <button id="toggleHideBtn" class="game-btn" style="display: none;">隠す</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

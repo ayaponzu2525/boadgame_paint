@@ -1,0 +1,191 @@
+body {
+    background-color: #1a237e; /* 濃い青色の背景 */
+    color: #ffffff;
+    font-family: 'Bangers', 'Arial', cursive; /* ゲーム風フォント */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(45deg, #1a237e 25%, #283593 25%, #283593 50%, #1a237e 50%, #1a237e 75%, #283593 75%, #283593 100%);
+    background-size: 56.57px 56.57px;
+}
+
+.container-center {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    width: 400px;
+}
+
+.container-left {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    width: 300px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffffff; /* 明るい黄色 */
+    text-shadow: 3px 3px 0px #00e8f0, 6px 6px 0px #05583f;
+    letter-spacing: 2px;
+}
+
+.game-btn {
+    background-color: #0e8b8b; 
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 0px #044946;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    min-width: 120px; /* ボタンの最小幅を設定 */
+}
+
+.game-btn:hover {
+    background-color: #18faef;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0px #05473d;
+}
+
+.game-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0px #075751;
+}
+
+#prompt {
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#prompt, .prompt-text {
+    margin-bottom: 15px;
+    font-size: 50px; /* デフォルトのフォントサイズ */
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #00213b;
+}
+
+/* 中サイズの画面用 */
+@media (max-width: 768px) {
+    .prompt-text {
+        font-size: 28px;
+    }
+}
+
+/* 小さい画面用 */
+@media (max-width: 480px) {
+    .prompt-text {
+        font-size: 24px;
+    }
+}
+
+.shapes-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #00213b;
+    margin-bottom: 20px;
+}
+
+#shapeImage {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-left, .container-center {
+        width: 90%;
+        margin: 0 0 20px 0;
+    }
+}
+
+.info-text {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #81d4fa;
+    text-shadow: 1px 1px 0px #0277bd;
+}
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* アニメーション効果 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.game-btn:hover {
+    animation: pulse 0.5s infinite;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 480px) {
+    .container-center {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .game-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* 横並びの親要素に対して */
+.block {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
