@@ -1,0 +1,6 @@
+[
+    {"prompt": "犬を描く", "category": "動物", "difficulty": "簡単"},
+    {"prompt": "車を描く", "category": "乗り物", "difficulty": "普通"},
+    {"prompt": "花を描く", "category": "自然", "difficulty": "簡単"},
+    {"prompt": "飛行機を描く", "category": "乗り物", "difficulty": "難しい"}
+]

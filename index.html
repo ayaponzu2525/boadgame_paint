@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お絵描きゲーム</title>
+    <style>
+        /* ゲーム風デザイン */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .start-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .next-btn, .end-btn {
+            display: none;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+        }
+        .end-btn {
+            background-color: #f44336;
+        }
+        #prompt {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>お絵描きゲーム</h1>
+    <div id="prompt"></div>
+    <button id="startBtn" class="button start-btn">開始する</button>
+    <button id="nextBtn" class="button next-btn">次へ</button>
+    <button id="endBtn" class="button end-btn">終了する</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
