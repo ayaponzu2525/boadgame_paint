@@ -2,7 +2,9 @@ const prompts = [
     {"prompt": "いぬ", "category": "動物", "difficulty": "簡単"},
     {"prompt": "くるま", "category": "乗り物", "difficulty": "普通"},
     {"prompt": "花", "category": "自然", "difficulty": "簡単"},
-    {"prompt": "ひこうき", "category": "乗り物", "difficulty": "難しい"}
+    {"prompt": "ひこうき", "category": "乗り物", "difficulty": "難しい"},
+    {"prompt": "ダースベーダー", "category": "キャラ", "difficulty": "難しい"},
+    {"prompt": "ばいきんまん", "category": "キャラ", "difficulty": "普通"},
 ];
 
 const shapes = [
@@ -96,6 +98,13 @@ function endGame() {
         document.getElementById('shapeImage').style.display = 'none';
         updateVisibility();
 
+        // お題の表示スタイルをリセット
+        const promptContainer = document.getElementById('promptContainer');
+        promptContainer.querySelectorAll('p').forEach(p => {
+            p.style.display = 'block';
+            p.style.textAlign = 'center';
+        });
+
         roundCounter = 1;
         updateRoundCounter();
         players = [];
@@ -114,9 +123,10 @@ function toggleHide() {
         hiddenImage.style.display = 'block';
         document.getElementById('toggleHideBtn').textContent = '表示する';
     } else {
-        promptContainer.querySelectorAll('p').forEach(p => p.style.display = 'block');
+        promptContainer.querySelectorAll('p').forEach(p => {
+            p.style.display = 'block';
+        });
         hiddenImage.style.display = 'none';
-        p.style.textAlign = 'center'; // 中央揃えを再適用
         document.getElementById('toggleHideBtn').textContent = '隠す';
     }
 }
