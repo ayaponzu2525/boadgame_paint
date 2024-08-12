@@ -206,12 +206,13 @@ h1 {
 /* 横並びの親要素に対して */
 .block {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* 要素を左右に均等に配置 */
     align-items: flex-start;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 @font-face {
     font-family: 'Minecraft';
